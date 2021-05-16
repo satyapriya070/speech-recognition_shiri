@@ -24,7 +24,7 @@ recognition.addEventListener("result", (e) => {
      }
 
 
-     if(text.includes('What is your name') ||text.includes("what's your name") || text.includes('Who is this')){
+     if(text.includes('what is your name') ||text.includes("what's your name") || text.includes('who is this')){
         p=document.createElement('p');
         p.classList.add('replay');
         p.innerText='My Name is Shiri, yours?';
