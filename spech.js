@@ -16,7 +16,7 @@ recognition.addEventListener("result", (e) => {
  p.innerText= text ;
  texts.appendChild(p);
  if(e.results[0].isFinal){
-     if(text.includes('hello')){
+     if(text.includes('hello') ||text.includes("hi siri") ){
          p=document.createElement('p');
          p.classList.add('replay');
          p.innerText='Hi';
@@ -46,6 +46,29 @@ recognition.addEventListener("result", (e) => {
         window.open('https://facebook.com')
     }
 
+    if(text.includes('open YouTube') || text.includes('YouTube')){
+        p=document.createElement('p');
+        p.classList.add('replay');
+        p.innerText='Opening YouTube';
+        texts.appendChild(p);
+        window.open('https://www.youtube.com/')
+    }
+    if(text.includes('play song') || text.includes('play a song')){
+        p=document.createElement('p');
+        p.classList.add('replay');
+        p.innerText='playing a song';
+        texts.appendChild(p);
+        window.open('https://music.youtube.com/watch?v=x3P4R5hykqU&list=RDAMVMx3P4R5hykqU')
+    }
+       if(text.includes('latest news') || text.includes('news')){
+        p=document.createElement('p');
+        p.classList.add('replay');
+        p.innerText='showing news';
+        texts.appendChild(p);
+        window.open('https://www.ndtv.com/latest')
+    }
+   
+   
     if(text.includes('hello Alexa') ||text.includes("hy Alexa") || text.includes('Alexa')){
         p=document.createElement('p');
         p.classList.add('replay');
